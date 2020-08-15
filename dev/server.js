@@ -3,6 +3,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+const db = require("./db");
+
 
 
 const PORT = process.env.PORT || 3000;
@@ -24,4 +26,7 @@ server.use(bodyParser.urlencoded({ extended: false }));
 // "/static" es una ruta vitual
 server.use("/static", express.static(path.join(__dirname, "./resources")));
 
-server.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));
+server.listen(PORT, () => {
+    console.log(`Server listening on port: ${PORT}`);
+    console.log("Resultados:\n" + db.testingQuery());
+});
