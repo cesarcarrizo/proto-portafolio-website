@@ -4,8 +4,12 @@
   "description": "Website para la gestión de proyectos personales y ofrecer servicios entre César Carrizo y Allyson Sandi",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon servidor.js"
   },
   "author": "César Carrizo & Allyson Sandi",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
